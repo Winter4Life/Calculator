@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 430px;
+    height: 430px;
+    gap: 10px;
+    background-color: transparent;
+    padding: 20px;
+    
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: #03a9f4;
+    box-shadow: 10px 5px 5px lightblue;
+}
+
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #03a9f4;;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    color: black;
+    background-color: transparent;
+    background-image: url(images/seashell.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    opacity: 1s;
+    transition: 0.3s;
+} 
+
+button:hover {
+    opacity: .6;
+}
+
+.background-grid {
+    position: absolute;
+    width: 305px;
+    height: 430px;
+    background-color: transparent;
+    border-radius: 10px; 
+    margin: 20px;
+    z-index: -1;
+}
+
+.water {
+    position: absolute;
+    width: 305px;
+    height: 430px;
+    background-color: lightblue;
+    animation: animate 5s ease-in-out infinite;
+    z-index: -2;
+}
+
+@keyframes animate {
+    0%,100% {
+        clip-path: polygon(100% 100%, 0% 100%, 0 50%, 17% 45%, 33% 46%, 53% 52%, 
+        64% 59%, 79% 61%, 90% 59%, 100% 56%);
+
+    }
+    50% {
+        clip-path: polygon(100% 100%, 0% 100%, 0 61%, 14% 66%, 33% 68%, 48% 64%, 
+        66% 57%, 79% 53%, 93% 53%, 100% 56%);
+
+
+    }
+}
+
+.sand {
+    background-image: url(images/sand.jpg);
+    position: absolute;
+    width: 305px;
+    height: 80px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.sunset {
+    background-image: linear-gradient(#FF5858, #FFFF45);
+    position: absolute;
+    width: 305px;
+    height: 100%;
+    top: 0;
+    z-index: -3;
+    border-radius: 10px;
+}
