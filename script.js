@@ -31,8 +31,8 @@ function calculateResult() {
 
   try {
     const result = calculate(currentInput);
-    clearInput();
     document.getElementById('display').value = result;
+    currentInput = result; 
   } catch (error) {
     document.getElementById('display').value = 'Error';
   }
