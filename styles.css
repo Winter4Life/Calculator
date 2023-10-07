@@ -85,6 +85,7 @@ button:hover {
     width: 305px;
     height: 430px;
     background-color: lightblue;
+    border-radius: 0px 0px 10px 10px;
     animation: animate 5s ease-in-out infinite;
     z-index: -2;
 }
@@ -109,6 +110,7 @@ button:hover {
     width: 305px;
     height: 80px;
     bottom: 0;
+    border-radius: 0px 0px 10px 10px;
     z-index: -1;
 }
 
